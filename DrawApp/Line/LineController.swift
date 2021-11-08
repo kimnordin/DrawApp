@@ -18,8 +18,8 @@ class LineController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let canvasWeight = canvasController?.pencil.line.width {
-            selectedWeight = canvasWeight*100
+        if let canvasWeight = canvasController?.tools.pencil.line.width {
+            selectedWeight = canvasWeight
         }
         updateReceiverWeight()
     }
@@ -45,7 +45,7 @@ class LineController: UIViewController {
     // Update the Parents line-weight to match this Views selectedWeight
     func updateSenderWeight() {
         if let weight = selectedWeight {
-            canvasController?.onWeightChange(weight: weight/100)
+            canvasController?.onWeightChange(weight: weight)
         }
     }
     
