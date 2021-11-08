@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController storyboardIdentifier="canvas" id="BYZ-38-t0r" customClass="CanvasController" customModule="DrawApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3J-Wu-Y8u" customClass="CanvasView" customModule="DrawApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="24" width="1024" height="1322"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-tX-bPI">
-                                        <rect key="frame" x="344" y="25" width="50" height="50"/>
+                                        <rect key="frame" x="954" y="25" width="50" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12y-tq-c1r">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwL-Sb-P5I">
-                                        <rect key="frame" x="354" y="35" width="30" height="30"/>
+                                        <rect key="frame" x="964" y="35" width="30" height="30"/>
                                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Y6G-r5-yru"/>
@@ -105,11 +105,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcb-8o-sku">
-                                <rect key="frame" x="0.0" y="116" width="414" height="388"/>
+                                <rect key="frame" x="0.0" y="119" width="414" height="385"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x0p-He-BHs">
-                                <rect key="frame" x="20" y="116" width="374" height="285"/>
+                                <rect key="frame" x="20" y="119" width="374" height="285"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eeJ-FQ-Z77">
                                         <rect key="frame" x="0.0" y="8.5" width="374" height="13.5"/>
@@ -212,30 +212,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avg-26-d2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ckr-fs-ddQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2525" y="202"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="RbK-JK-Q7h">
-            <objects>
-                <viewController id="nDg-b4-g2u" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nws-Ds-UKk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="m8j-Us-Ev7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="pencil.circle" catalog="system" selectedImage="pencil.circle.fill" id="DyC-cn-yTo">
-                        <color key="badgeColor" systemColor="labelColor"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gml-5m-AkG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1757" y="-287"/>
+            <point key="canvasLocation" x="2525" y="279"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="qPH-7V-dtM">
             <objects>
-                <tabBarController storyboardIdentifier="maintab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VfY-sF-lnC" customClass="MainTabController" customModule="DrawApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VfY-sF-lnC" customClass="MainTabController" customModule="DrawApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Bp-lR-5jF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -243,7 +225,7 @@
                         <color key="selectedImageTintColor" systemColor="labelColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="nDg-b4-g2u" kind="relationship" relationship="viewControllers" id="jgD-1k-IrK"/>
+                        <segue destination="mZO-6G-2NN" kind="relationship" relationship="viewControllers" id="NrH-d1-4zQ"/>
                         <segue destination="4wH-dU-xWM" kind="relationship" relationship="viewControllers" id="Xc5-FX-M5O"/>
                     </connections>
                 </tabBarController>
@@ -251,10 +233,10 @@
             </objects>
             <point key="canvasLocation" x="988" y="52"/>
         </scene>
-        <!--Item-->
+        <!--Style Tab Controller-->
         <scene sceneID="lJC-Pp-SOo">
             <objects>
-                <tabBarController storyboardIdentifier="subtab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4wH-dU-xWM" customClass="SubTabController" customModule="DrawApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="styleTab" title="Style Tab Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4wH-dU-xWM" customClass="StyleTabController" customModule="DrawApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="paintbrush" catalog="system" selectedImage="paintbrush.fill" id="eod-y2-RTR">
                         <color key="badgeColor" systemColor="labelColor"/>
                     </tabBarItem>
@@ -272,22 +254,22 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbt-kR-0Wp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="390"/>
+            <point key="canvasLocation" x="1757" y="467"/>
         </scene>
-        <!--Line-->
+        <!--Appearance-->
         <scene sceneID="98Q-eN-2hf">
             <objects>
-                <viewController storyboardIdentifier="line" title="Line" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vc3-Cx-xhn" customClass="LineController" customModule="DrawApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="appearance" title="Appearance" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vc3-Cx-xhn" customClass="AppearanceController" customModule="DrawApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnN-r0-smQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WrX-ZL-mag">
-                                <rect key="frame" x="0.0" y="237" width="414" height="213"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="210"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nM6-fc-Qpf">
-                                <rect key="frame" x="15" y="237" width="384" height="110"/>
+                                <rect key="frame" x="15" y="240" width="384" height="110"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-UK-HF9">
                                         <rect key="frame" x="0.0" y="8.5" width="384" height="13.5"/>
@@ -343,21 +325,125 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogT-mo-rpz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="JVc-U2-Cei" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2525" y="596"/>
+            <point key="canvasLocation" x="2525" y="673"/>
+        </scene>
+        <!--Type-->
+        <scene sceneID="uxT-M1-V8Y">
+            <objects>
+                <viewController storyboardIdentifier="type" title="Type" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MB9-s4-paQ" customClass="TypeController" customModule="DrawApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MvW-me-5ow">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="447"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ea6-iL-8LP">
+                                <rect key="frame" x="0.0" y="237" width="414" height="210"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Lf-l8-nvp">
+                                <rect key="frame" x="15" y="237" width="384" height="110"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ViW-4Q-yXa">
+                                        <rect key="frame" x="0.0" y="8.5" width="384" height="13.5"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="o9R-gb-AwL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="eye.slash" catalog="system" maximumValueImage="eye" translatesAutoresizingMaskIntoConstraints="NO" id="AhR-x0-roC">
+                                        <rect key="frame" x="-2" y="40" width="388" height="31"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="thumbTintColor" systemColor="labelColor"/>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="18" minValue="1" maxValue="35" minimumValueImage="scribble" catalog="system" maximumValueImage="scribble.variable" translatesAutoresizingMaskIntoConstraints="NO" id="i0D-Qh-PKL">
+                                        <rect key="frame" x="-2" y="80" width="388" height="31"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="thumbTintColor" systemColor="labelColor"/>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fJh-8N-vWY"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Lf-l8-nvp" firstAttribute="leading" secondItem="fJh-8N-vWY" secondAttribute="leading" constant="15" id="O2B-zC-JRq"/>
+                            <constraint firstItem="fJh-8N-vWY" firstAttribute="bottom" secondItem="8Lf-l8-nvp" secondAttribute="bottom" constant="5" id="Svq-Fd-BRw"/>
+                            <constraint firstItem="fJh-8N-vWY" firstAttribute="trailing" secondItem="8Lf-l8-nvp" secondAttribute="trailing" constant="15" id="XcF-My-bAC"/>
+                            <constraint firstItem="Ea6-iL-8LP" firstAttribute="bottom" secondItem="MvW-me-5ow" secondAttribute="bottom" id="fjc-cl-XoA"/>
+                            <constraint firstItem="Ea6-iL-8LP" firstAttribute="top" secondItem="8Lf-l8-nvp" secondAttribute="top" id="oX7-8q-L7T"/>
+                            <constraint firstItem="Ea6-iL-8LP" firstAttribute="trailing" secondItem="fJh-8N-vWY" secondAttribute="trailing" id="w2H-Q0-JQK"/>
+                            <constraint firstItem="Ea6-iL-8LP" firstAttribute="leading" secondItem="fJh-8N-vWY" secondAttribute="leading" id="xTm-SU-OkW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="rectangle.and.pencil.and.ellipsis" catalog="system" selectedImage="rectangle.and.pencil.and.ellipsis" id="Al8-W0-pgK">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="be1-T7-NKH"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="447"/>
+                    <connections>
+                        <outlet property="backView" destination="Ea6-iL-8LP" id="E0i-4Q-FFi"/>
+                        <segue destination="qT6-xC-lVc" kind="unwind" identifier="cancelSegue" unwindAction="cancel:" id="4rb-l1-NyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7tB-73-XN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qT6-xC-lVc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2520" y="-168"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="CPs-rM-F1i">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d27-Lg-Oez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="lNI-Tz-pbq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GhB-he-ZcC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fZU-MD-hgs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="lasso.and.sparkles" catalog="system" selectedImage="lasso.and.sparkles" id="5rc-5F-eaS">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2523" y="-699"/>
+        </scene>
+        <!--Behaviour Type Controller-->
+        <scene sceneID="dNA-Lu-wZn">
+            <objects>
+                <tabBarController storyboardIdentifier="behaviourTab" title="Behaviour Type Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mZO-6G-2NN" customClass="BehaviourTabController" customModule="DrawApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="pencil.and.outline" catalog="system" selectedImage="pencil.and.outline" id="dUo-CS-uCa">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iSA-Hh-zMg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lNI-Tz-pbq" kind="relationship" relationship="viewControllers" id="5Ff-NI-lep"/>
+                        <segue destination="MB9-s4-paQ" kind="relationship" relationship="viewControllers" id="zw7-kc-EM8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJD-oh-6dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757" y="-379"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
         <image name="eye" catalog="system" width="128" height="81"/>
         <image name="eye.slash" catalog="system" width="128" height="86"/>
+        <image name="lasso.and.sparkles" catalog="system" width="114" height="128"/>
         <image name="lineweight" catalog="system" width="128" height="110"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="paintbrush" catalog="system" width="122" height="128"/>
         <image name="paintbrush.fill" catalog="system" width="122" height="128"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
         <image name="paintpalette.fill" catalog="system" width="128" height="105"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="pencil.and.outline" catalog="system" width="128" height="128"/>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
         <image name="scribble" catalog="system" width="128" height="118"/>
         <image name="scribble.variable" catalog="system" width="128" height="118"/>
         <systemColor name="labelColor">

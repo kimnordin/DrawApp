@@ -20,7 +20,7 @@ class CanvasController: UIViewController {
         didSet {
             tools.pencil.color = selectedColor
             canvasView.pencil.color = tools.pencil.color
-            colorWeightPreview.backgroundColor = tools.pencil.color
+            colorWeightPreview.backgroundColor = tools.pencil.color.withAlphaComponent(tools.pencil.line.opacity)
         }
     }
     

@@ -12,8 +12,11 @@ class MainTabController: UITabBarController, UITabBarControllerDelegate {
         didSet {
             if let controllers = self.viewControllers {
                 for vc in controllers {
-                    if let subTab = vc as? SubTabController {
-                        subTab.sender = sender
+                    if let styleTab = vc as? StyleTabController {
+                        styleTab.sender = sender
+                    }
+                    if let behaviourTab = vc as? BehaviourTabController {
+                        behaviourTab.sender = sender
                     }
                 }
             }

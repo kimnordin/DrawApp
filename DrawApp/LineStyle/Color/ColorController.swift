@@ -38,7 +38,7 @@ class ColorController: UIViewController {
         }
         
         selectedColor = canvasController?.selectedColor
-        updateReceiverColors()
+        updateReceiver()
         
         let nib = UINib(nibName: "ColorCollectionCell", bundle: nil)
         colorCollection.register(nib, forCellWithReuseIdentifier: "ColorCollectionCell")
@@ -55,17 +55,17 @@ class ColorController: UIViewController {
         
         selectedColor = UIColor(red:red/255, green:green/255, blue:blue/255, alpha:1.0)
         updatePreview()
-        updateSenderColor()
+        updateSender()
     }
     
     // Update this View to match the Parents current selectedColor
-    func updateReceiverColors() {
+    func updateReceiver() {
         updatePreview()
         updateSliders(color: selectedColor)
     }
     
     // Update the Parents color to match this Views selectedColor
-    func updateSenderColor() {
+    func updateSender() {
         canvasController?.onColorChange(color: selectedColor ?? .black)
     }
     
@@ -121,7 +121,7 @@ extension ColorController: UICollectionViewDataSource, UICollectionViewDelegate,
         selectedColor = colorArray[indexPath.row]
         updateSliders(color: selectedColor)
         colorPreview.backgroundColor = selectedColor
-        updateSenderColor()
+        updateSender()
     }
 
     func collectionView(_ collectionView: UICollectionView,

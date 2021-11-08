@@ -93,10 +93,15 @@ extension UIViewController: UIPopoverPresentationControllerDelegate {
     
     func popController() {
         self.definesPresentationContext = true
-        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "maintab") as? MainTabController else { return }
+        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "mainTab") as? MainTabController else { return }
         popVC.sender = self as? CanvasController
-        popVC.modalPresentationStyle = .popover
+        popVC.modalPresentationStyle = .automatic
         popVC.popoverPresentationController?.delegate = self
+        
+        // For iPad Devices
+        popVC.popoverPresentationController?.sourceView = self.view
+        popVC.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+        popVC.popoverPresentationController?.permittedArrowDirections = []
         
         self.present(popVC, animated: true)
     }
