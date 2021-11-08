@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LineController: UIViewController {
+class AppearanceController: UIViewController {
 
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var opacitySlider: UISlider!

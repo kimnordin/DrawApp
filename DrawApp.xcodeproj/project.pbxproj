@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F25F050F27396AC300DC8969 /* SubTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F050E27396AC300DC8969 /* SubTabController.swift */; };
+		F25F050F27396AC300DC8969 /* StyleTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F050E27396AC300DC8969 /* StyleTabController.swift */; };
 		F2645F0B2734972C00A237F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2645F0A2734972C00A237F7 /* AppDelegate.swift */; };
 		F2645F0D2734972C00A237F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2645F0C2734972C00A237F7 /* SceneDelegate.swift */; };
 		F2645F0F2734972C00A237F7 /* CanvasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2645F0E2734972C00A237F7 /* CanvasController.swift */; };
@@ -21,12 +21,14 @@
 		F2645F2D2734981600A237F7 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2645F2C2734981600A237F7 /* CanvasView.swift */; };
 		F2645F2F27349E4500A237F7 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2645F2E27349E4500A237F7 /* Colors.plist */; };
 		F2AA412E2739A42F00EC471C /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA412D2739A42F00EC471C /* Tool.swift */; };
-		F2DCA11C2738878500E3C73A /* LineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DCA11B2738878500E3C73A /* LineController.swift */; };
+		F2D23AF02739E05C00CFCC47 /* TypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AEF2739E05C00CFCC47 /* TypeController.swift */; };
+		F2D23AF22739E10400CFCC47 /* BehaviourTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AF12739E10400CFCC47 /* BehaviourTabController.swift */; };
+		F2DCA11C2738878500E3C73A /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DCA11B2738878500E3C73A /* AppearanceController.swift */; };
 		F2DCA11F27388EFB00E3C73A /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DCA11E27388EFB00E3C73A /* MainTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F25F050E27396AC300DC8969 /* SubTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTabController.swift; sourceTree = "<group>"; };
+		F25F050E27396AC300DC8969 /* StyleTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTabController.swift; sourceTree = "<group>"; };
 		F2645F072734972C00A237F7 /* DrawApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2645F0A2734972C00A237F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2645F0C2734972C00A237F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +44,9 @@
 		F2645F2C2734981600A237F7 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		F2645F2E27349E4500A237F7 /* Colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
 		F2AA412D2739A42F00EC471C /* Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
-		F2DCA11B2738878500E3C73A /* LineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineController.swift; sourceTree = "<group>"; };
+		F2D23AEF2739E05C00CFCC47 /* TypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeController.swift; sourceTree = "<group>"; };
+		F2D23AF12739E10400CFCC47 /* BehaviourTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviourTabController.swift; sourceTree = "<group>"; };
+		F2DCA11B2738878500E3C73A /* AppearanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
 		F2DCA11E27388EFB00E3C73A /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,8 +83,8 @@
 				F2AA412C2739A42600EC471C /* Models */,
 				F2645F25273497DE00A237F7 /* Util */,
 				F2645F2B273497FA00A237F7 /* Canvas */,
-				F2DCA1182738873900E3C73A /* Line */,
-				F2645F1E2734978E00A237F7 /* Color */,
+				F2D23AEE2739E00100CFCC47 /* LineBehaviour */,
+				F2DCA1182738873900E3C73A /* LineStyle */,
 				F2DCA11D27388EE500E3C73A /* Tab */,
 				F2645F0A2734972C00A237F7 /* AppDelegate.swift */,
 				F2645F0C2734972C00A237F7 /* SceneDelegate.swift */,
@@ -128,19 +132,37 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F2DCA1182738873900E3C73A /* Line */ = {
+		F2D23AED2739DFD500CFCC47 /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
-				F2DCA11B2738878500E3C73A /* LineController.swift */,
+				F2DCA11B2738878500E3C73A /* AppearanceController.swift */,
 			);
-			path = Line;
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		F2D23AEE2739E00100CFCC47 /* LineBehaviour */ = {
+			isa = PBXGroup;
+			children = (
+				F2D23AEF2739E05C00CFCC47 /* TypeController.swift */,
+			);
+			path = LineBehaviour;
+			sourceTree = "<group>";
+		};
+		F2DCA1182738873900E3C73A /* LineStyle */ = {
+			isa = PBXGroup;
+			children = (
+				F2D23AED2739DFD500CFCC47 /* Appearance */,
+				F2645F1E2734978E00A237F7 /* Color */,
+			);
+			path = LineStyle;
 			sourceTree = "<group>";
 		};
 		F2DCA11D27388EE500E3C73A /* Tab */ = {
 			isa = PBXGroup;
 			children = (
 				F2DCA11E27388EFB00E3C73A /* MainTabController.swift */,
-				F25F050E27396AC300DC8969 /* SubTabController.swift */,
+				F2D23AF12739E10400CFCC47 /* BehaviourTabController.swift */,
+				F25F050E27396AC300DC8969 /* StyleTabController.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -219,14 +241,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2645F0F2734972C00A237F7 /* CanvasController.swift in Sources */,
+				F2D23AF02739E05C00CFCC47 /* TypeController.swift in Sources */,
 				F2645F29273497DE00A237F7 /* Extensions.swift in Sources */,
-				F2DCA11C2738878500E3C73A /* LineController.swift in Sources */,
+				F2DCA11C2738878500E3C73A /* AppearanceController.swift in Sources */,
 				F2AA412E2739A42F00EC471C /* Tool.swift in Sources */,
 				F2645F2D2734981600A237F7 /* CanvasView.swift in Sources */,
 				F2645F0B2734972C00A237F7 /* AppDelegate.swift in Sources */,
 				F2DCA11F27388EFB00E3C73A /* MainTabController.swift in Sources */,
 				F2645F0D2734972C00A237F7 /* SceneDelegate.swift in Sources */,
-				F25F050F27396AC300DC8969 /* SubTabController.swift in Sources */,
+				F25F050F27396AC300DC8969 /* StyleTabController.swift in Sources */,
+				F2D23AF22739E10400CFCC47 /* BehaviourTabController.swift in Sources */,
 				F2645F232734978E00A237F7 /* ColorCollectionCell.swift in Sources */,
 				F2645F222734978E00A237F7 /* ColorController.swift in Sources */,
 			);

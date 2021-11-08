@@ -7,14 +7,18 @@
 
 import UIKit
 
-class SubTabController: UITabBarController, UITabBarControllerDelegate {
+class StyleTabController: UITabBarController, UITabBarControllerDelegate {
     var sender: CanvasController? {
         didSet {
-            if let colorVc = self.viewControllers?[0] as? ColorController {
-                colorVc.canvasController = sender
-            }
-            if let lineVc = self.viewControllers?[1] as? LineController {
-                lineVc.canvasController = sender
+            if let controllers = self.viewControllers {
+                for vc in controllers {
+                    if let colorVc = vc as? ColorController {
+                        colorVc.canvasController = sender
+                    }
+                    if let appearanceVc = vc as? AppearanceController {
+                        appearanceVc.canvasController = sender
+                    }
+                }
             }
         }
     }
@@ -30,4 +34,3 @@ class SubTabController: UITabBarController, UITabBarControllerDelegate {
         sender?.selectedTabIndex.1 = tabBarIndex
     }
 }
-
