@@ -283,11 +283,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WrX-ZL-mag">
-                                <rect key="frame" x="0.0" y="277" width="414" height="173"/>
+                                <rect key="frame" x="0.0" y="237" width="414" height="213"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nM6-fc-Qpf">
-                                <rect key="frame" x="15" y="277" width="384" height="70"/>
+                                <rect key="frame" x="15" y="237" width="384" height="110"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-UK-HF9">
                                         <rect key="frame" x="0.0" y="8.5" width="384" height="13.5"/>
@@ -296,12 +296,20 @@
                                             <constraint firstAttribute="height" constant="30" id="EO2-9O-zY6"/>
                                         </constraints>
                                     </imageView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15.5" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="zzI-Cz-i7Q">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="eye.slash" catalog="system" maximumValueImage="eye" translatesAutoresizingMaskIntoConstraints="NO" id="zzI-Cz-i7Q">
                                         <rect key="frame" x="-2" y="40" width="388" height="31"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <color key="thumbTintColor" systemColor="labelColor"/>
                                         <connections>
                                             <action selector="sliderAction:" destination="Vc3-Cx-xhn" eventType="valueChanged" id="RmW-L2-gji"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="18" minValue="1" maxValue="35" minimumValueImage="scribble" catalog="system" maximumValueImage="scribble.variable" translatesAutoresizingMaskIntoConstraints="NO" id="80V-ya-ezP">
+                                        <rect key="frame" x="-2" y="80" width="388" height="31"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="thumbTintColor" systemColor="labelColor"/>
+                                        <connections>
+                                            <action selector="sliderAction:" destination="Vc3-Cx-xhn" eventType="valueChanged" id="Xaz-az-6GU"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -327,7 +335,8 @@
                     <size key="freeformSize" width="414" height="450"/>
                     <connections>
                         <outlet property="backView" destination="WrX-ZL-mag" id="b1U-mb-kcq"/>
-                        <outlet property="weightSlider" destination="zzI-Cz-i7Q" id="5YP-5v-sEn"/>
+                        <outlet property="opacitySlider" destination="zzI-Cz-i7Q" id="Azm-8j-KB7"/>
+                        <outlet property="weightSlider" destination="80V-ya-ezP" id="vM9-pr-0zj"/>
                         <segue destination="JVc-U2-Cei" kind="unwind" identifier="cancelSegue" unwindAction="cancel:" id="xnd-7F-n3n"/>
                     </connections>
                 </viewController>
@@ -339,6 +348,8 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
+        <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="lineweight" catalog="system" width="128" height="110"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="paintbrush" catalog="system" width="122" height="128"/>
@@ -347,6 +358,8 @@
         <image name="paintpalette.fill" catalog="system" width="128" height="105"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="scribble" catalog="system" width="128" height="118"/>
+        <image name="scribble.variable" catalog="system" width="128" height="118"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

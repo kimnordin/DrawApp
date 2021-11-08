@@ -71,7 +71,7 @@ class CanvasView: UIView {
     
     // Is Touching and Moving
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first?.location(in: nil) else { return }
+        guard let touch = touches.first?.location(in: self) else { return }
         guard var lastPoint = lines.popLast() else { return } // Last tapped point
         
         lastPoint.points?.append(touch)

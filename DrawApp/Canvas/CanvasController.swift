@@ -24,7 +24,15 @@ class CanvasController: UIViewController {
         }
     }
     
-    var selectedWeight: CGFloat = 2.0 {
+    var selectedOpacity: CGFloat = 1.0 {
+        didSet {
+            tools.pencil.line.opacity = selectedOpacity
+            canvasView.pencil.line.opacity = selectedOpacity
+            styleToolButton()
+        }
+    }
+    
+    var selectedWeight: CGFloat = 5.0 {
         didSet {
             tools.pencil.line.width = selectedWeight
             canvasView.pencil.line.width = selectedWeight
@@ -63,6 +71,7 @@ class CanvasController: UIViewController {
             widthConstraint.constant = 5
             colorWeightPreview.layer.cornerRadius = 5/2
         }
+        colorWeightPreview.backgroundColor = colorWeightPreview.backgroundColor?.withAlphaComponent(selectedOpacity)
     }
     
     func styleUndoButton(canUndo: Bool) {
@@ -84,6 +93,10 @@ class CanvasController: UIViewController {
     
     func onColorChange(color: UIColor) {
         selectedColor = color
+    }
+    
+    func onOpacityChange(opacity: CGFloat) {
+        selectedOpacity = opacity
     }
     
     func onWeightChange(weight: CGFloat) {
