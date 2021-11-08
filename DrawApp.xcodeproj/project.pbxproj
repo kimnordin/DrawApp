@@ -20,7 +20,7 @@
 		F2645F29273497DE00A237F7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2645F27273497DE00A237F7 /* Extensions.swift */; };
 		F2645F2D2734981600A237F7 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2645F2C2734981600A237F7 /* CanvasView.swift */; };
 		F2645F2F27349E4500A237F7 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2645F2E27349E4500A237F7 /* Colors.plist */; };
-		F2AA41292739A2F600EC471C /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA41282739A2F600EC471C /* Tool.swift */; };
+		F2AA412E2739A42F00EC471C /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AA412D2739A42F00EC471C /* Tool.swift */; };
 		F2DCA11C2738878500E3C73A /* LineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DCA11B2738878500E3C73A /* LineController.swift */; };
 		F2DCA11F27388EFB00E3C73A /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DCA11E27388EFB00E3C73A /* MainTabController.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +41,7 @@
 		F2645F27273497DE00A237F7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F2645F2C2734981600A237F7 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		F2645F2E27349E4500A237F7 /* Colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
-		F2AA41282739A2F600EC471C /* Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tool.swift; path = ../../../../../Tool.swift; sourceTree = "<group>"; };
+		F2AA412D2739A42F00EC471C /* Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		F2DCA11B2738878500E3C73A /* LineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineController.swift; sourceTree = "<group>"; };
 		F2DCA11E27388EFB00E3C73A /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +76,7 @@
 		F2645F092734972C00A237F7 /* DrawApp */ = {
 			isa = PBXGroup;
 			children = (
-				F2DCA115273882AA00E3C73A /* Models */,
+				F2AA412C2739A42600EC471C /* Models */,
 				F2645F25273497DE00A237F7 /* Util */,
 				F2645F2B273497FA00A237F7 /* Canvas */,
 				F2DCA1182738873900E3C73A /* Line */,
@@ -120,10 +120,10 @@
 			path = Canvas;
 			sourceTree = "<group>";
 		};
-		F2DCA115273882AA00E3C73A /* Models */ = {
+		F2AA412C2739A42600EC471C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F2AA41282739A2F600EC471C /* Tool.swift */,
+				F2AA412D2739A42F00EC471C /* Tool.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 				F2645F0F2734972C00A237F7 /* CanvasController.swift in Sources */,
 				F2645F29273497DE00A237F7 /* Extensions.swift in Sources */,
 				F2DCA11C2738878500E3C73A /* LineController.swift in Sources */,
-				F2AA41292739A2F600EC471C /* Tool.swift in Sources */,
+				F2AA412E2739A42F00EC471C /* Tool.swift in Sources */,
 				F2645F2D2734981600A237F7 /* CanvasView.swift in Sources */,
 				F2645F0B2734972C00A237F7 /* AppDelegate.swift in Sources */,
 				F2DCA11F27388EFB00E3C73A /* MainTabController.swift in Sources */,
