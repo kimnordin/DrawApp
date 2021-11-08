@@ -10,18 +10,21 @@ import UIKit
 class LineController: UIViewController {
 
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var opacitySlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
     
+    var selectedOpacity: CGFloat?
     var selectedWeight: CGFloat?
     var canvasController: CanvasController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let canvasWeight = canvasController?.tools.pencil.line.width {
-            selectedWeight = canvasWeight
+        if let canvas = canvasController {
+            selectedWeight = canvas.tools.pencil.line.width
+            selectedOpacity = canvas.tools.pencil.line.opacity
         }
-        updateReceiverWeight()
+        updateReceiver()
     }
     
     override func viewDidLayoutSubviews() {
@@ -29,35 +32,40 @@ class LineController: UIViewController {
     }
     
     @IBAction func sliderAction(_ sender: UISlider) {
-        let weight = CGFloat(sender.value)
+        let opacity = CGFloat(opacitySlider.value)
+        let weight = CGFloat(weightSlider.value)
+        selectedOpacity = opacity
         selectedWeight = weight
-        updateSenderWeight()
+        updateSender()
     }
     
-    // Update this View to match the Parents current selectedWeight
-    func updateReceiverWeight() {
-        updatePreview()
+    // Update this View to match the Parents current Line
+    func updateReceiver() {
         if let weight = selectedWeight {
             updateSliders(weight: weight)
         }
-    }
-    
-    // Update the Parents line-weight to match this Views selectedWeight
-    func updateSenderWeight() {
-        if let weight = selectedWeight {
-            canvasController?.onWeightChange(weight: weight)
+        if let opacity = selectedOpacity {
+            updateSliders(opacity: opacity)
         }
     }
     
-    // Update the Preview View to match the selectedWeight
-    func updatePreview() {
-
+    // Update the Parents Line to match this Views Line
+    func updateSender() {
+        if let weight = selectedWeight {
+            canvasController?.onWeightChange(weight: weight)
+        }
+        if let opacity = selectedOpacity {
+            canvasController?.onOpacityChange(opacity: opacity)
+        }
     }
-    
-    // Update the Slider Views to match the selectedWeight
-    func updateSliders(weight: CGFloat?) {
+
+    // Update the Slider Views to match the current value
+    func updateSliders(weight: CGFloat? = nil, opacity: CGFloat? = nil) {
         if let weight = weight {
             weightSlider.value = Float(weight)
+        }
+        if let opacity = opacity {
+            opacitySlider.value = Float(opacity)
         }
     }
 }
