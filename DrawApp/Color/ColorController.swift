@@ -54,7 +54,7 @@ class ColorController: UIViewController {
         let blue = CGFloat(blueSlider.value)
         
         selectedColor = UIColor(red:red/255, green:green/255, blue:blue/255, alpha:1.0)
-        colorPreview.backgroundColor = selectedColor
+        updatePreview()
         updateSenderColor()
     }
     
