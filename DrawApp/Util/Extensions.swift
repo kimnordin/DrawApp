@@ -80,7 +80,7 @@ extension UIView {
     }
 }
 
-extension UIViewController {
+extension UIViewController: UIPopoverPresentationControllerDelegate {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
@@ -89,5 +89,15 @@ extension UIViewController {
 
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func popController() {
+        self.definesPresentationContext = true
+        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "maintab") as? MainTabController else { return }
+        popVC.sender = self as? CanvasController
+        popVC.modalPresentationStyle = .popover
+        popVC.popoverPresentationController?.delegate = self
+        
+        self.present(popVC, animated: true)
     }
 }

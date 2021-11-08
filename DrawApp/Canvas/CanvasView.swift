@@ -29,9 +29,8 @@ class CanvasView: UIView {
             linesCallback?(lines.isEmpty)
         }
     }
-    var strokeColor: UIColor = .black
-    var strokeWidth: CGFloat = 2.0
-    var strokeOpacity: CGFloat = 1.0
+
+    var pencil: Pencil = Pencil()
     
     func clearCanvas() {
         lines.removeAll()
@@ -67,7 +66,7 @@ class CanvasView: UIView {
     
     // Started Touch
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lines.append(TouchDrawColor(color: strokeColor, width: strokeWidth, opacity: strokeOpacity, points: []))
+        lines.append(TouchDrawColor(color: pencil.color, width: pencil.line.width, opacity: pencil.line.opacity, points: []))
     }
     
     // Is Touching and Moving
@@ -76,9 +75,9 @@ class CanvasView: UIView {
         guard var lastPoint = lines.popLast() else { return } // Last tapped point
         
         lastPoint.points?.append(touch)
-        lastPoint.color = strokeColor
-        lastPoint.width = strokeWidth
-        lastPoint.opacity = strokeOpacity
+        lastPoint.color = pencil.color
+        lastPoint.width = pencil.line.width
+        lastPoint.opacity = pencil.line.opacity
         lines.append(lastPoint)
         
         setNeedsDisplay() // Calls draw() function

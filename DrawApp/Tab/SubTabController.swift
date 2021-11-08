@@ -1,13 +1,13 @@
 //
-//  TabController.swift
+//  SubTabController.swift
 //  DrawApp
 //
-//  Created by Kim Nordin on 2021-11-07.
+//  Created by Kim Nordin on 2021-11-08.
 //
 
 import UIKit
 
-class TabController: UITabBarController, UITabBarControllerDelegate {
+class SubTabController: UITabBarController, UITabBarControllerDelegate {
     var sender: CanvasController? {
         didSet {
             if let colorVc = self.viewControllers?[0] as? ColorController {
@@ -22,11 +22,12 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        self.selectedIndex = sender?.selectedTabIndex ?? 0
+        self.selectedIndex = sender?.selectedTabIndex.1 ?? 0
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         let tabBarIndex = tabBarController.selectedIndex
-        sender?.selectedTabIndex = tabBarIndex
+        sender?.selectedTabIndex.1 = tabBarIndex
     }
 }
+
