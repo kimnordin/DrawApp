@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-enum ToolType {
-    case pencil, line, color
+class Tools {
+    var pencil = Pencil()
 }
 
 class Tool {
@@ -26,8 +26,7 @@ class Line: Tool {
     var width: CGFloat
     var opacity: CGFloat
     var points: [CGPoint]
-    let type = ToolType.line
-    init(width: CGFloat, opacity: CGFloat, points: [CGPoint]) {
+    init(width: CGFloat = 2.0, opacity: CGFloat = 1.0, points: [CGPoint] = []) {
         self.width = width
         self.opacity = opacity
         self.points = points
@@ -38,7 +37,6 @@ class Line: Tool {
 class Pencil: Tool {
     var line: Line
     var color: UIColor = .black
-    let type = ToolType.pencil
     
     init(line: Line = Line(width: 2.0, opacity: 1.0, points: []), color: UIColor = .black) {
         self.line = line
