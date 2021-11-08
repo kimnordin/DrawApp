@@ -12,31 +12,28 @@ class CanvasController: UIViewController {
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var canvasView: CanvasView!
     
-    var selectedTabIndex: Int = 0
+    var selectedTabIndex: (Int, Int) = (1, 0)
+    
     var selectedColor = UIColor.black {
         didSet {
-            canvasView.strokeColor = selectedColor
-            colorButton.backgroundColor = selectedColor
+            pencil.color = selectedColor
+            canvasView.pencil.color = pencil.color
+            colorButton.backgroundColor = pencil.color
         }
     }
     
     var selectedWeight: CGFloat = 2.0 {
         didSet {
-            canvasView.strokeWidth = selectedWeight
+            pencil.line.width = selectedWeight
+            canvasView.pencil.line.width = selectedWeight
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toolBar" {
-            guard let destination = segue.destination as? TabController else {return}
-            destination.sender = self
-        }
-    }
+    var pencil = Pencil()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedColor = .label
-        
         colorButton.layer.cornerRadius = colorButton.frame.width/2
         colorButton.layer.borderWidth = 3
         colorButton.layer.borderColor = UIColor.label.cgColor
@@ -55,9 +52,12 @@ class CanvasController: UIViewController {
         }
     }
     
+    @IBAction func toolButtonAction(_ sender: UIButton) {
+        popController()
+    }
+    
     @IBAction func undoButtonAction(_ sender: UIButton) {
         canvasView.undoDraw()
-        
     }
     
     func onColorChange(color: UIColor) {
